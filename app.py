@@ -16,9 +16,11 @@ import mlflow
 from mlflow.models import infer_signature
 import mlflow.sklearn
 
+import dagshub
+dagshub.init(repo_owner='atul-aiml', repo_name='mlflow-experiments', mlflow=True)
+
 import logging
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
